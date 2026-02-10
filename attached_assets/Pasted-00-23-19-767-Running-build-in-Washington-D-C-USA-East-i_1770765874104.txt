@@ -1,0 +1,62 @@
+00:23:19.767 Running build in Washington, D.C., USA (East) – iad1
+00:23:19.768 Build machine configuration: 2 cores, 8 GB
+00:23:19.876 Cloning github.com/ange918/susunilab (Branch: main, Commit: 6b52dd3)
+00:23:19.877 Previous build caches not available.
+00:23:20.086 Cloning completed: 210.000ms
+00:23:20.578 Running "vercel build"
+00:23:21.610 Vercel CLI 50.14.1
+00:23:22.109 Installing dependencies...
+00:23:33.889 
+00:23:33.890 added 363 packages in 12s
+00:23:33.890 
+00:23:33.891 145 packages are looking for funding
+00:23:33.891   run `npm fund` for details
+00:23:33.947 Detected Next.js version: 16.1.6
+00:23:33.951 Running "npm run build"
+00:23:34.048 
+00:23:34.048 > susuni@0.1.0 build
+00:23:34.049 > next build
+00:23:34.049 
+00:23:34.834 Attention: Next.js now collects completely anonymous telemetry regarding usage.
+00:23:34.835 This information is used to shape Next.js' roadmap and prioritize features.
+00:23:34.835 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+00:23:34.836 https://nextjs.org/telemetry
+00:23:34.836 
+00:23:34.848 ▲ Next.js 16.1.6 (Turbopack)
+00:23:34.848 
+00:23:34.884   Creating an optimized production build ...
+00:23:40.823 
+00:23:40.824 > Build error occurred
+00:23:40.828 Error: Turbopack build failed with 2 errors:
+00:23:40.828 ./app/a-propos/page.tsx:2:1
+00:23:40.828 Module not found: Can't resolve './components/Footer'
+00:23:40.829 [0m [90m 1 |[39m [36mimport[39m [33mHeader[39m [36mfrom[39m [32m"./components/Header"[39m[33m;[39m
+00:23:40.829 [31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mFooter[39m [36mfrom[39m [32m"./components/Footer"[39m[33m;[39m
+00:23:40.830  [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+00:23:40.845  [90m 3 |[39m
+00:23:40.846  [90m 4 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mAboutPage[39m() {
+00:23:40.846  [90m 5 |[39m   [36mreturn[39m ([0m
+00:23:40.847 
+00:23:40.847 
+00:23:40.847 
+00:23:40.847 https://nextjs.org/docs/messages/module-not-found
+00:23:40.848 
+00:23:40.848 
+00:23:40.848 ./app/a-propos/page.tsx:1:1
+00:23:40.849 Module not found: Can't resolve './components/Header'
+00:23:40.849 [0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33mHeader[39m [36mfrom[39m [32m"./components/Header"[39m[33m;[39m
+00:23:40.849  [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+00:23:40.850  [90m 2 |[39m [36mimport[39m [33mFooter[39m [36mfrom[39m [32m"./components/Footer"[39m[33m;[39m
+00:23:40.850  [90m 3 |[39m
+00:23:40.850  [90m 4 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mAboutPage[39m() {[0m
+00:23:40.850 
+00:23:40.851 
+00:23:40.851 
+00:23:40.851 https://nextjs.org/docs/messages/module-not-found
+00:23:40.851 
+00:23:40.852 
+00:23:40.852     at <unknown> (./app/a-propos/page.tsx:2:1)
+00:23:40.852     at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+00:23:40.853     at <unknown> (./app/a-propos/page.tsx:1:1)
+00:23:40.853     at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+00:23:40.903 Error: Command "npm run build" exited with 1
