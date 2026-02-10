@@ -9,6 +9,7 @@ export default function Home() {
       id: "EXPLORE",
       title: "SUSUNI LAB EXPLORE",
       description: "Recherche et exploration des dynamiques culturelles et créatives africaines.",
+      link: "/exploration",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -19,6 +20,7 @@ export default function Home() {
       id: "LEARNING",
       title: "SUSUNI LAB LEARNING",
       description: "Programmes de transmission et de formation pour les talents de demain.",
+      link: "/learning",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
@@ -29,6 +31,7 @@ export default function Home() {
       id: "CONSULTING",
       title: "SUSUNI LAB CONSULTING",
       description: "Accompagnement stratégique pour les institutions et entreprises créatives.",
+      link: "/strategy",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -39,6 +42,7 @@ export default function Home() {
       id: "INNOVATIONS",
       title: "SUSUNI LAB INNOVATIONS",
       description: "Laboratoire d'idées et de solutions technologiques ancrées localement.",
+      link: "/innovation",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -140,14 +144,74 @@ export default function Home() {
                 <div className="text-[#0078B7] mb-6 group-hover:scale-110 transition-transform">{branch.icon}</div>
                 <h3 className="text-xl font-bold mb-4 text-[#1B2441]">{branch.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">{branch.description}</p>
-                <a href="#" className="text-[#0078B7] text-sm font-bold inline-flex items-center hover:underline">
+                <Link href={branch.link} className="text-[#0078B7] text-sm font-bold inline-flex items-center hover:underline">
                   En savoir plus
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </a>
+                </Link>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* FAQ SECTION */}
+        <section id="faq" className="py-24 bg-white">
+          <div className="max-w-3xl mx-auto px-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-[#1B2441] mb-16">Questions Fréquentes</h2>
+            <div className="space-y-6">
+              <div className="p-6 bg-gray-50 rounded-2xl">
+                <h3 className="text-lg font-bold text-[#1B2441] mb-2">Comment puis-je collaborer avec SUSUNI LAB ?</h3>
+                <p className="text-gray-600">Vous pouvez nous contacter via notre page "Collaborer" pour nous soumettre vos idées de projets ou propositions de partenariat.</p>
+              </div>
+              <div className="p-6 bg-gray-50 rounded-2xl">
+                <h3 className="text-lg font-bold text-[#1B2441] mb-2">Quels types de formations proposez-vous ?</h3>
+                <p className="text-gray-600">Nous proposons des masterclasses, des ateliers pratiques et des programmes de mentorat axés sur la créativité et la stratégie.</p>
+              </div>
+              <div className="p-6 bg-gray-50 rounded-2xl">
+                <h3 className="text-lg font-bold text-[#1B2441] mb-2">Où êtes-vous basés ?</h3>
+                <p className="text-gray-600">Notre siège principal est à Cotonou, au Bénin, mais nous intervenons sur des projets à l'échelle internationale.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* AVIS CLIENTS SECTION */}
+        <section id="avis" className="py-24 bg-[#1B2441] text-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Ce que disent nos partenaires</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
+                <p className="text-lg italic mb-6">"Une approche rafraîchissante et profondément ancrée. SUSUNI LAB a su transformer notre vision en une réalité stratégique impactante."</p>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-blue-500 rounded-full"></div>
+                  <div>
+                    <h4 className="font-bold">Jean-Paul D.</h4>
+                    <p className="text-sm opacity-60">Directeur Artistique</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
+                <p className="text-lg italic mb-6">"Leur expertise en ingénierie culturelle est unique sur le continent. Un partenaire indispensable pour nos projets d'innovation."</p>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-green-500 rounded-full"></div>
+                  <div>
+                    <h4 className="font-bold">Aminata S.</h4>
+                    <p className="text-sm opacity-60">Fondatrice, Tech-Heritage</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
+                <p className="text-lg italic mb-6">"Plus qu'un laboratoire, c'est un véritable écosystème de création et de réflexion pour l'Afrique de demain."</p>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-purple-500 rounded-full"></div>
+                  <div>
+                    <h4 className="font-bold">Marc K.</h4>
+                    <p className="text-sm opacity-60">Consultant Stratégique</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
