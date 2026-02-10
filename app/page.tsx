@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Link from "next/link";
 
 export default function Home() {
   const branches = [
@@ -46,24 +49,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* HEADER */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100 transition-all">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <span className="text-2xl font-bold tracking-tighter text-[#1B2441]">
-              SUSUNI <span className="text-[#0078B7]">LAB</span>
-            </span>
-          </div>
-          <nav className="hidden md:flex items-center space-x-8 text-sm font-medium uppercase tracking-wider">
-            <a href="#" className="hover:text-[#0078B7] transition-colors">Accueil</a>
-            <a href="#propos" className="hover:text-[#0078B7] transition-colors">À propos</a>
-            <a href="#branches" className="hover:text-[#0078B7] transition-colors">Nos branches</a>
-            <a href="#projets" className="hover:text-[#0078B7] transition-colors">Projets</a>
-            <a href="#collaborer" className="hover:text-[#0078B7] transition-colors">Collaborer</a>
-            <a href="#contact" className="hover:text-[#0078B7] transition-colors">Contact</a>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <main>
         {/* HERO SECTION */}
@@ -87,9 +73,9 @@ export default function Home() {
               <a href="#branches" className="px-8 py-4 bg-[#0078B7] hover:bg-[#005c8d] text-white rounded-full font-semibold transition-all hover:scale-105 active:scale-95 shadow-lg">
                 Découvrir nos branches
               </a>
-              <a href="#collaborer" className="px-8 py-4 bg-transparent border-2 border-white hover:bg-white hover:text-[#1B2441] text-white rounded-full font-semibold transition-all">
-                Collaborer avec nous
-              </a>
+              <Link href="/a-propos" className="px-8 py-4 bg-transparent border-2 border-white hover:bg-white hover:text-[#1B2441] text-white rounded-full font-semibold transition-all">
+                À propos de nous
+              </Link>
             </div>
           </div>
           <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
@@ -97,6 +83,49 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
              </svg>
           </div>
+        </section>
+
+        {/* SECTION À PROPOS (COURTE) */}
+        <section id="propos" className="py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="flex flex-col md:flex-row items-center gap-16">
+              <div className="md:w-1/2">
+                <h2 className="text-3xl md:text-5xl font-bold text-[#1B2441] mb-6">Un laboratoire au cœur de <span className="text-[#0078B7]">l'innovation africaine</span></h2>
+                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                  SUSUNI LAB est né de la volonté de repenser la créativité et la stratégie à partir de l'Afrique. Nous sommes un espace d'exploration où la culture rencontre la technologie pour créer des solutions à portée internationale.
+                </p>
+                <Link href="/a-propos" className="text-[#0078B7] font-bold inline-flex items-center hover:underline group">
+                  Découvrir notre histoire
+                  <svg className="w-5 h-5 ml-2 group-hover:ml-4 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
+              <div className="md:w-1/2 relative aspect-video bg-gray-100 rounded-3xl overflow-hidden shadow-xl">
+                 <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-bold italic text-2xl">
+                    [Vision Créative]
+                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION VISION (MISE AVANT NOS BRANCHES) */}
+        <section className="py-24 bg-[#1B2441] text-white overflow-hidden relative">
+          <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 className="text-3xl md:text-5xl font-bold mb-8">Notre Vision</h2>
+            <p className="text-xl md:text-2xl font-light opacity-90 leading-relaxed italic mb-12 text-blue-100">
+              "Ancrés dans les réalités du Bénin et de l'Afrique, nous portons une ambition universelle : transformer la créativité en levier stratégique pour l'avenir."
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-white/10">
+              <div><p className="text-2xl md:text-3xl font-bold">Créativité</p></div>
+              <div><p className="text-2xl md:text-3xl font-bold">Transmission</p></div>
+              <div><p className="text-2xl md:text-3xl font-bold">Stratégie</p></div>
+              <div><p className="text-2xl md:text-3xl font-bold">Innovation</p></div>
+            </div>
+          </div>
+          <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-[#0078B7] rounded-full mix-blend-screen filter blur-3xl opacity-20"></div>
+          <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#0078B7] rounded-full mix-blend-screen filter blur-3xl opacity-20"></div>
         </section>
 
         {/* BRANCHES SECTION */}
@@ -107,8 +136,8 @@ export default function Home() {
           </div>
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {branches.map((branch) => (
-              <div key={branch.id} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-100">
-                <div className="text-[#0078B7] mb-6">{branch.icon}</div>
+              <div key={branch.id} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-100 group">
+                <div className="text-[#0078B7] mb-6 group-hover:scale-110 transition-transform">{branch.icon}</div>
                 <h3 className="text-xl font-bold mb-4 text-[#1B2441]">{branch.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">{branch.description}</p>
                 <a href="#" className="text-[#0078B7] text-sm font-bold inline-flex items-center hover:underline">
@@ -119,22 +148,6 @@ export default function Home() {
                 </a>
               </div>
             ))}
-          </div>
-        </section>
-
-        {/* VALEURS / VISION */}
-        <section className="py-24 bg-[#1B2441] text-white">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8">Notre Vision</h2>
-            <p className="text-xl md:text-2xl font-light opacity-90 leading-relaxed italic mb-12 text-blue-100">
-              "Ancrés dans les réalités du Bénin et de l'Afrique, nous portons une ambition universelle : transformer la créativité en levier stratégique pour l'avenir."
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-white/10">
-              <div><p className="text-3xl font-bold">Créativité</p></div>
-              <div><p className="text-3xl font-bold">Transmission</p></div>
-              <div><p className="text-3xl font-bold">Stratégie</p></div>
-              <div><p className="text-3xl font-bold">Innovation</p></div>
-            </div>
           </div>
         </section>
 
@@ -190,55 +203,7 @@ export default function Home() {
         </section>
       </main>
 
-      {/* FOOTER */}
-      <footer id="contact" className="bg-white border-t border-gray-100 py-16">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
-          <div className="col-span-1 md:col-span-1">
-            <span className="text-2xl font-bold tracking-tighter text-[#1B2441] mb-6 block">
-              SUSUNI <span className="text-[#0078B7]">LAB</span>
-            </span>
-            <p className="text-gray-500 text-sm leading-relaxed mb-6 italic">Laboratoire créatif africain à portée internationale.</p>
-            <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-[#1B2441] hover:bg-[#0078B7] hover:text-white transition-all">LN</a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-[#1B2441] hover:bg-[#0078B7] hover:text-white transition-all">IG</a>
-            </div>
-          </div>
-          <div>
-            <h5 className="font-bold text-[#1B2441] mb-6 uppercase tracking-widest text-xs">Navigation</h5>
-            <ul className="space-y-4 text-sm text-gray-600">
-              <li><a href="#" className="hover:text-[#0078B7]">Accueil</a></li>
-              <li><a href="#propos" className="hover:text-[#0078B7]">À propos</a></li>
-              <li><a href="#branches" className="hover:text-[#0078B7]">Nos branches</a></li>
-              <li><a href="#projets" className="hover:text-[#0078B7]">Projets</a></li>
-            </ul>
-          </div>
-          <div>
-            <h5 className="font-bold text-[#1B2441] mb-6 uppercase tracking-widest text-xs">Contact</h5>
-            <ul className="space-y-4 text-sm text-gray-600">
-              <li className="flex items-center">
-                <span className="font-semibold mr-2">Email:</span>
-                <a href="mailto:contact.susunilabs@gmail.com" className="hover:text-[#0078B7]">contact.susunilabs@gmail.com</a>
-              </li>
-              <li className="flex items-center">
-                <span className="font-semibold mr-2">Tel:</span>
-                <a href="tel:+2290164469119" className="hover:text-[#0078B7]">+229 01 64469119</a>
-              </li>
-              <li>Bénin / Afrique / International</li>
-            </ul>
-          </div>
-          <div>
-            <h5 className="font-bold text-[#1B2441] mb-6 uppercase tracking-widest text-xs">Newsletter</h5>
-            <p className="text-xs text-gray-500 mb-4">Restez informé de nos explorations.</p>
-            <div className="flex">
-              <input type="email" placeholder="Votre email" className="bg-gray-50 border border-gray-100 px-4 py-2 rounded-l-lg w-full text-sm outline-none focus:border-[#0078B7]" />
-              <button className="bg-[#1B2441] text-white px-4 py-2 rounded-r-lg hover:bg-[#0078B7] transition-all">OK</button>
-            </div>
-          </div>
-        </div>
-        <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-gray-50 text-center text-xs text-gray-400">
-          <p>© {new Date().getFullYear()} SUSUNI LAB. Tous droits réservés.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
