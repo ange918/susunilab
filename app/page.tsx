@@ -3,6 +3,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Link from "next/link";
 import { FlipText } from "@/components/ui/flip-text";
+import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 export default function Home() {
   const branches = [
@@ -69,7 +71,7 @@ export default function Home() {
           <div className="absolute inset-0 hero-overlay"></div>
           <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white">
             <h1 className="text-4xl md:text-7xl font-bold mb-6 leading-[1.1] animate-fade-in-up">
-              SUSUNI LAB — <FlipText words={["EXPLORE", "LEARNING", "CONSULTING", "INNOVATIONS"]} className="text-[#0078B7]" /> à partir de l’Afrique
+              SUSUNI LAB — <FlipText words={["EXPLORE", "LEARNING", "CONSULTING", "INNOVATIONS"]} className="text-[#0078B7]" />
             </h1>
             <p className="text-lg md:text-2xl mb-12 max-w-3xl mx-auto opacity-90 leading-relaxed font-light">
               Laboratoire créatif et stratégique, nous bâtissons des ponts entre héritage culturel, innovation contemporaine et vision internationale.
@@ -160,27 +162,39 @@ export default function Home() {
         <section id="faq" className="py-24 bg-white">
           <div className="max-w-3xl mx-auto px-6">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-[#1B2441] mb-16">Questions Fréquentes</h2>
-            <div className="space-y-6">
-              <div className="p-6 bg-gray-50 rounded-2xl">
-                <h3 className="text-lg font-bold text-[#1B2441] mb-2">Comment puis-je collaborer avec SUSUNI LAB ?</h3>
-                <p className="text-gray-600">Vous pouvez nous contacter via notre page "Collaborer" pour nous soumettre vos idées de projets ou propositions de partenariat.</p>
-              </div>
-              <div className="p-6 bg-gray-50 rounded-2xl">
-                <h3 className="text-lg font-bold text-[#1B2441] mb-2">Quels types de formations proposez-vous ?</h3>
-                <p className="text-gray-600">Nous proposons des masterclasses, des ateliers pratiques et des programmes de mentorat axés sur la créativité et la stratégie.</p>
-              </div>
-              <div className="p-6 bg-gray-50 rounded-2xl">
-                <h3 className="text-lg font-bold text-[#1B2441] mb-2">Où êtes-vous basés ?</h3>
-                <p className="text-gray-600">Notre siège principal est à Cotonou, au Bénin, mais nous intervenons sur des projets à l'échelle internationale.</p>
-              </div>
+            <div className="space-y-4">
+              {[
+                {
+                  q: "Comment puis-je collaborer avec SUSUNI LAB ?",
+                  a: "Vous pouvez nous contacter via notre page \"Collaborer\" pour nous soumettre vos idées de projets ou propositions de partenariat."
+                },
+                {
+                  q: "Quels types de formations proposez-vous ?",
+                  a: "Nous proposons des masterclasses, des ateliers pratiques et des programmes de mentorat axés sur la créativité et la stratégie."
+                },
+                {
+                  q: "Où êtes-vous basés ?",
+                  a: "Notre siège principal est à Cotonou, au Bénin, mais nous intervenons sur des projets à l'échelle internationale."
+                }
+              ].map((item, idx) => (
+                <Disclosure key={idx} as="div" className="bg-gray-50 rounded-2xl overflow-hidden">
+                  <DisclosureButton className="group flex w-full items-center justify-between p-6 text-left focus:outline-none">
+                    <span className="text-lg font-bold text-[#1B2441]">{item.q}</span>
+                    <ChevronDownIcon className="size-5 text-[#0078B7] transition-transform group-data-[open]:rotate-180" />
+                  </DisclosureButton>
+                  <DisclosurePanel className="px-6 pb-6 text-gray-600">
+                    {item.a}
+                  </DisclosurePanel>
+                </Disclosure>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* AVIS CLIENTS SECTION */}
-        <section id="avis" className="py-24 bg-[#1B2441] text-white">
+        {/* SECTION TÉMOIGNAGES */}
+        <section id="temoignages" className="py-24 bg-[#1B2441] text-white">
           <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Ce que disent nos partenaires</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Témoignages</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
                 <p className="text-lg italic mb-6">"Une approche rafraîchissante et profondément ancrée. SUSUNI LAB a su transformer notre vision en une réalité stratégique impactante."</p>
