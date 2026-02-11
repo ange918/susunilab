@@ -5,12 +5,18 @@ export default function CollaborerPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow pt-32 pb-24">
-        <section className="max-w-7xl mx-auto px-6">
-          <h1 className="text-4xl md:text-6xl font-bold text-[#1B2441] mb-8">Collaborer avec nous</h1>
-          <p className="text-xl text-gray-700 leading-relaxed mb-12">
-            Rejoignez l'écosystème SUSUNI LAB pour construire ensemble le futur de la création.
-          </p>
+      <main className="flex-grow">
+        {/* Hero Section */}
+        <section className="pt-40 pb-20 bg-[#0078B7] text-white text-center">
+          <div className="max-w-7xl mx-auto px-6">
+            <h1 className="text-5xl md:text-7xl font-bold mb-8">Collaborer <span className="text-[#1B2441]">avec nous</span></h1>
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90 leading-relaxed">
+              Rejoignez l'écosystème SUSUNI LAB pour construire ensemble le futur de la création africaine.
+            </p>
+          </div>
+        </section>
+
+        <section className="max-w-7xl mx-auto px-6 py-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="space-y-6">
               <h2 className="text-2xl font-bold text-[#0078B7]">Pour les Créatifs</h2>

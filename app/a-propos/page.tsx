@@ -18,10 +18,13 @@ export default function AboutPage() {
                   SUSUNI LAB est un laboratoire créatif, stratégique, culturel et innovant basé au Bénin, avec une résonance internationale. Notre mission est d'explorer les potentiels inexploités de l'Afrique contemporaine pour proposer des solutions visionnaires.
                 </p>
                 <p>
-                  Nous croyons en une Afrique qui ne se contente pas de suivre, mais qui définit les standards de demain à travers la créativité, la transmission de savoirs et l'excellence stratégique.
+                  Fondé sur la conviction que l'Afrique est le berceau d'une nouvelle Renaissance, nous travaillons à l'intersection de l'art, de la technologie et de la stratégie. Nous ne nous contentons pas d'observer les tendances ; nous les créons en nous appuyant sur un héritage culturel riche et une vision résolument tournée vers l'avenir.
                 </p>
                 <p>
-                  Que ce soit à travers l'exploration culturelle, l'apprentissage continu, le conseil stratégique ou l'innovation technologique, chaque projet porté par SUSUNI LAB est une brique posée pour l'édification d'un futur créatif et structuré.
+                  Nous croyons en une Afrique qui ne se contente pas de suivre, mais qui définit les standards de demain à travers la créativité, la transmission de savoirs et l'excellence stratégique. Notre approche est holistique, intégrant les dimensions sociales, économiques et esthétiques pour un impact durable.
+                </p>
+                <p>
+                  Que ce soit à travers l'exploration culturelle, l'apprentissage continu, le conseil stratégique ou l'innovation technologique, chaque projet porté par SUSUNI LAB est une brique posée pour l'édification d'un futur créatif et structuré. Nous sommes les architectes de nouveaux imaginaires, transformant les idées en réalités concrètes et impactantes.
                 </p>
               </div>
             </div>
@@ -34,19 +37,41 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-12">
-             <div className="bg-[#1B2441] text-white p-10 rounded-2xl">
-                <h3 className="text-2xl font-bold mb-4">Notre Vision</h3>
-                <p className="opacity-80 leading-relaxed">Être le catalyseur de la nouvelle vague créative et intellectuelle africaine, en connectant traditions et futurisme.</p>
-             </div>
-             <div className="bg-[#0078B7] text-white p-10 rounded-2xl">
-                <h3 className="text-2xl font-bold mb-4">Notre Mission</h3>
-                <p className="opacity-80 leading-relaxed">Accompagner les acteurs de demain par l'innovation, le conseil et la transmission de savoirs stratégiques.</p>
-             </div>
-             <div className="bg-gray-100 p-10 rounded-2xl border border-gray-200">
-                <h3 className="text-2xl font-bold mb-4 text-[#1B2441]">Nos Valeurs</h3>
-                <p className="text-gray-600 leading-relaxed">Excellence, Authenticité, Audace et Impact social durable à travers la culture.</p>
-             </div>
+          <div className="mt-32">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-bold text-[#1B2441] mb-4">Notre Vision & Engagement</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto text-lg">Quatre piliers fondamentaux qui guident chacune de nos actions et définissent notre identité.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+               <div className="bg-[#1B2441] text-white p-8 rounded-2xl flex flex-col h-full transform transition-transform hover:-translate-y-2">
+                  <div className="w-12 h-12 bg-[#0078B7] rounded-full flex items-center justify-center mb-6">
+                    <span className="text-xl font-bold">01</span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">La Vision</h3>
+                  <p className="opacity-80 leading-relaxed flex-grow">Être le catalyseur de la nouvelle vague créative et intellectuelle africaine, en connectant traditions et futurisme pour un rayonnement mondial.</p>
+               </div>
+               <div className="bg-white border border-gray-100 shadow-sm p-8 rounded-2xl flex flex-col h-full transform transition-transform hover:-translate-y-2">
+                  <div className="w-12 h-12 bg-[#1B2441] text-white rounded-full flex items-center justify-center mb-6">
+                    <span className="text-xl font-bold">02</span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-[#1B2441]">La Mission</h3>
+                  <p className="text-gray-600 leading-relaxed flex-grow">Accompagner les acteurs de demain par l'innovation, le conseil et la transmission de savoirs stratégiques à fort impact.</p>
+               </div>
+               <div className="bg-[#0078B7] text-white p-8 rounded-2xl flex flex-col h-full transform transition-transform hover:-translate-y-2">
+                  <div className="w-12 h-12 bg-white text-[#0078B7] rounded-full flex items-center justify-center mb-6">
+                    <span className="text-xl font-bold">03</span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">Les Valeurs</h3>
+                  <p className="opacity-90 leading-relaxed flex-grow">Excellence sans compromis, authenticité radicale, audace créative et impact social durable à travers la culture et l'innovation.</p>
+               </div>
+               <div className="bg-gray-100 p-8 rounded-2xl flex flex-col h-full transform transition-transform hover:-translate-y-2">
+                  <div className="w-12 h-12 bg-[#1B2441] text-white rounded-full flex items-center justify-center mb-6">
+                    <span className="text-xl font-bold">04</span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-[#1B2441]">L'Approche</h3>
+                  <p className="text-gray-600 leading-relaxed flex-grow">Une méthodologie hybride alliant rigueur stratégique, intuition créative et une compréhension profonde des contextes locaux.</p>
+               </div>
+            </div>
           </div>
         </section>
       </main>
