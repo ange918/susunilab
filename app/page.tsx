@@ -2,6 +2,7 @@ import Image from "next/image";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Link from "next/link";
+import { FlipText } from "@/components/ui/flip-text";
 
 export default function Home() {
   const branches = [
@@ -68,7 +69,7 @@ export default function Home() {
           <div className="absolute inset-0 hero-overlay"></div>
           <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white">
             <h1 className="text-4xl md:text-7xl font-bold mb-6 leading-[1.1] animate-fade-in-up">
-              SUSUNI LAB — Explorer, transmettre, conseiller et innover à partir de l’Afrique
+              SUSUNI LAB — <FlipText words={["EXPLORE", "LEARNING", "CONSULTING", "INNOVATIONS"]} className="text-[#0078B7]" /> à partir de l’Afrique
             </h1>
             <p className="text-lg md:text-2xl mb-12 max-w-3xl mx-auto opacity-90 leading-relaxed font-light">
               Laboratoire créatif et stratégique, nous bâtissons des ponts entre héritage culturel, innovation contemporaine et vision internationale.
