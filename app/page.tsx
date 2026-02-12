@@ -261,24 +261,55 @@ export default function Home() {
         {/* SECTION TÉMOIGNAGES */}
         <section id="temoignages" className="py-32 bg-[#1B2441] text-white">
           <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-24 tracking-tight">TÉMOIGNAGES</h2>
+            <motion.div 
+              className="text-center mb-24"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">ILS NOUS FONT CONFIANCE</h2>
+              <div className="w-24 h-1 bg-[#0078B7] mx-auto"></div>
+            </motion.div>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { name: "Jean-Paul D.", role: "Directeur Artistique", color: "bg-blue-500", text: "Une approche rafraîchissante et profondément ancrée. SUSUNI LAB a su transformer notre vision en une reality stratégique impactante." },
-                { name: "Aminata S.", role: "Fondatrice, Tech-Heritage", color: "bg-green-500", text: "Leur expertise en ingénierie culturelle est unique sur le continent. Un partenaire indispensable pour nos projets d'innovation." },
-                { name: "Marc K.", role: "Consultant Stratégique", color: "bg-purple-500", text: "Plus qu'un laboratoire, c'est un véritable écosystème de création et de réflexion pour l'Afrique de demain." }
+                { 
+                  name: "Jean-Paul D.", 
+                  role: "Directeur Artistique", 
+                  color: "bg-blue-500", 
+                  text: "Une approche rafraîchissante et profondément ancrée. SUSUNI LAB a su transformer notre vision en une réalité stratégique impactante." 
+                },
+                { 
+                  name: "Aminata S.", 
+                  role: "Fondatrice, Tech-Heritage", 
+                  color: "bg-green-500", 
+                  text: "Leur expertise en ingénierie culturelle est unique sur le continent. Un partenaire indispensable pour nos projets d'innovation." 
+                },
+                { 
+                  name: "Marc K.", 
+                  role: "Consultant Stratégique", 
+                  color: "bg-purple-500", 
+                  text: "Plus qu'un laboratoire, c'est un véritable écosystème de création et de réflexion pour l'Afrique de demain." 
+                }
               ].map((t, idx) => (
                 <motion.div 
                   key={idx}
-                  className="bg-white/5 p-10 rounded-[2.5rem] backdrop-blur-sm border border-white/10 flex flex-col h-full"
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
+                  className="bg-white/5 p-10 rounded-[2.5rem] backdrop-blur-sm border border-white/10 flex flex-col h-full hover:bg-white/10 transition-colors duration-300"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
                 >
+                  <div className="mb-8">
+                    <svg className="w-10 h-10 text-[#0078B7] opacity-50" fill="currentColor" viewBox="0 0 32 32">
+                      <path d="M10 8c-4.418 0-8 3.582-8 8s3.582 8 8 8c1.11 0 2.162-.228 3.125-.635C12.446 25.176 10.375 27 8 27c-.552 0-1 .448-1 1s.448 1 1 1c3.866 0 7-3.134 7-7V16c0-4.418-3.582-8-8-8zm14 0c-4.418 0-8 3.582-8 8s3.582 8 8 8c1.11 0 2.162-.228 3.125-.635C26.446 25.176 24.375 27 22 27c-.552 0-1 .448-1 1s.448 1 1 1c3.866 0 7-3.134 7-7V16c0-4.418-3.582-8-8-8z" />
+                    </svg>
+                  </div>
                   <p className="text-xl italic mb-10 opacity-90 leading-relaxed flex-grow">"{t.text}"</p>
-                  <div className="flex items-center gap-4">
-                    <div className={`w-14 h-14 ${t.color} rounded-full`}></div>
+                  <div className="flex items-center gap-4 border-t border-white/10 pt-8">
+                    <div className={`w-14 h-14 ${t.color} rounded-full flex items-center justify-center text-xl font-bold shadow-lg`}>
+                      {t.name.charAt(0)}
+                    </div>
                     <div>
                       <h4 className="font-bold text-lg">{t.name}</h4>
                       <p className="text-sm opacity-60 uppercase tracking-widest">{t.role}</p>
