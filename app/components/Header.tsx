@@ -16,13 +16,21 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const [isBranchesOpen, setIsBranchesOpen] = useState(false);
+
   const navLinks = [
     { name: "Accueil", href: "/" },
     { name: "À propos", href: "/a-propos" },
-    { name: "Stratégie", href: "/strategy" },
-    { name: "Learning", href: "/learning" },
-    { name: "Innovation", href: "/innovation" },
-    { name: "Exploration", href: "/exploration" },
+    { 
+      name: "Nos branches", 
+      href: "#",
+      subItems: [
+        { name: "Stratégie", href: "/strategy" },
+        { name: "Learning", href: "/learning" },
+        { name: "Innovation", href: "/innovation" },
+        { name: "Exploration", href: "/exploration" },
+      ]
+    },
     { name: "Collaborer", href: "/collaborer" },
     { name: "Contact", href: "/contact" },
   ];
@@ -43,9 +51,36 @@ export default function Header() {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center space-x-8 text-sm font-semibold uppercase tracking-wider text-[#1B2441]">
           {navLinks.map((link) => (
-            <Link key={link.name} href={link.href} className="hover:text-[#0078B7] transition-colors">
-              {link.name}
-            </Link>
+            <div key={link.name} className="relative group">
+              {link.subItems ? (
+                <>
+                  <button 
+                    className="hover:text-[#0078B7] transition-colors flex items-center gap-1"
+                    onClick={() => setIsBranchesOpen(!isBranchesOpen)}
+                  >
+                    {link.name}
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-xl rounded-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                    {link.subItems.map((subItem) => (
+                      <Link 
+                        key={subItem.name} 
+                        href={subItem.href}
+                        className="block px-6 py-2 hover:bg-gray-50 hover:text-[#0078B7] transition-colors text-xs"
+                      >
+                        {subItem.name}
+                      </Link>
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <Link href={link.href} className="hover:text-[#0078B7] transition-colors">
+                  {link.name}
+                </Link>
+              )}
+            </div>
           ))}
         </nav>
 
@@ -66,17 +101,46 @@ export default function Header() {
 
       {/* Mobile Nav Overlay */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-xl border-t border-gray-100 animate-in slide-in-from-top duration-300">
-          <nav className="flex flex-col p-6 space-y-4 text-center">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-xl border-t border-gray-100 animate-in slide-in-from-top duration-300 overflow-y-auto max-h-[80vh]">
+          <nav className="flex flex-col p-6 space-y-4">
             {navLinks.map((link) => (
-              <Link 
-                key={link.name} 
-                href={link.href} 
-                className="text-lg font-bold text-[#1B2441] hover:text-[#0078B7]"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.name}
-              </Link>
+              <div key={link.name} className="flex flex-col">
+                {link.subItems ? (
+                  <>
+                    <button 
+                      className="text-lg font-bold text-[#1B2441] flex items-center justify-between"
+                      onClick={() => setIsBranchesOpen(!isBranchesOpen)}
+                    >
+                      {link.name}
+                      <svg className={`w-5 h-5 transition-transform ${isBranchesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    {isBranchesOpen && (
+                      <div className="flex flex-col pl-4 mt-2 space-y-2 border-l-2 border-[#0078B7]/20">
+                        {link.subItems.map((subItem) => (
+                          <Link 
+                            key={subItem.name} 
+                            href={subItem.href}
+                            className="text-base text-gray-600 hover:text-[#0078B7]"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <Link 
+                    href={link.href} 
+                    className="text-lg font-bold text-[#1B2441] hover:text-[#0078B7]"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                )}
+              </div>
             ))}
           </nav>
         </div>
