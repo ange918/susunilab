@@ -21,22 +21,26 @@ export default function Header() {
   const navLinks = [
     { name: "Accueil", href: "/" },
     { name: "À propos", href: "/a-propos" },
-    { 
-      name: "Nos branches", 
+    {
+      name: "NOS BRANCHES ",
       href: "#",
       subItems: [
         { name: "Stratégie", href: "/strategy" },
         { name: "Learning", href: "/learning" },
         { name: "Innovation", href: "/innovation" },
         { name: "Exploration", href: "/exploration" },
-      ]
+      ],
     },
+    { name: "Projets", href: "/projets" },
+    { name: "Projets", href: "/projets" },
     { name: "Collaborer", href: "/collaborer" },
     { name: "Contact", href: "/contact" },
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-md py-2" : "bg-white/80 py-4"}`}>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-md py-2" : "bg-white/80 py-4"}`}
+    >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <Link href="/" className="relative h-12 w-40">
           <Image
@@ -54,19 +58,29 @@ export default function Header() {
             <div key={link.name} className="relative group">
               {link.subItems ? (
                 <>
-                  <button 
+                  <button
                     className="hover:text-[#0078B7] transition-colors flex items-center gap-1"
                     onClick={() => setIsBranchesOpen(!isBranchesOpen)}
                   >
                     {link.name}
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
                     </svg>
                   </button>
                   <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-xl rounded-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
                     {link.subItems.map((subItem) => (
-                      <Link 
-                        key={subItem.name} 
+                      <Link
+                        key={subItem.name}
                         href={subItem.href}
                         className="block px-6 py-2 hover:bg-gray-50 hover:text-[#0078B7] transition-colors text-xs"
                       >
@@ -76,7 +90,10 @@ export default function Header() {
                   </div>
                 </>
               ) : (
-                <Link href={link.href} className="hover:text-[#0078B7] transition-colors">
+                <Link
+                  href={link.href}
+                  className="hover:text-[#0078B7] transition-colors"
+                >
                   {link.name}
                 </Link>
               )}
@@ -85,15 +102,30 @@ export default function Header() {
         </nav>
 
         {/* Mobile Burger Menu Button */}
-        <button 
+        <button
           className="md:hidden text-[#1B2441] focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg
+            className="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
             {isMenuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
             )}
           </svg>
         </button>
@@ -107,20 +139,30 @@ export default function Header() {
               <div key={link.name} className="flex flex-col">
                 {link.subItems ? (
                   <>
-                    <button 
+                    <button
                       className="text-lg font-bold text-[#1B2441] flex items-center justify-between"
                       onClick={() => setIsBranchesOpen(!isBranchesOpen)}
                     >
                       {link.name}
-                      <svg className={`w-5 h-5 transition-transform ${isBranchesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      <svg
+                        className={`w-5 h-5 transition-transform ${isBranchesOpen ? "rotate-180" : ""}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
                       </svg>
                     </button>
                     {isBranchesOpen && (
                       <div className="flex flex-col pl-4 mt-2 space-y-2 border-l-2 border-[#0078B7]/20">
                         {link.subItems.map((subItem) => (
-                          <Link 
-                            key={subItem.name} 
+                          <Link
+                            key={subItem.name}
                             href={subItem.href}
                             className="text-base text-gray-600 hover:text-[#0078B7]"
                             onClick={() => setIsMenuOpen(false)}
@@ -132,8 +174,8 @@ export default function Header() {
                     )}
                   </>
                 ) : (
-                  <Link 
-                    href={link.href} 
+                  <Link
+                    href={link.href}
                     className="text-lg font-bold text-[#1B2441] hover:text-[#0078B7]"
                     onClick={() => setIsMenuOpen(false)}
                   >
