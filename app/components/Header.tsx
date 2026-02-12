@@ -32,7 +32,6 @@ export default function Header() {
       ],
     },
     { name: "Projets", href: "/projets" },
-    { name: "Projets", href: "/projets" },
     { name: "Collaborer", href: "/collaborer" },
     { name: "Contact", href: "/contact" },
   ];
