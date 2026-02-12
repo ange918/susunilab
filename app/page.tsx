@@ -150,22 +150,45 @@ export default function Home() {
         {/* SECTION VISION */}
         <section className="py-32 bg-[#1B2441] text-white overflow-hidden relative">
           <motion.div 
-            className="max-w-4xl mx-auto px-6 text-center relative z-10"
+            className="max-w-7xl mx-auto px-6 relative z-10"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-10">Notre Vision</h2>
-            <p className="text-2xl md:text-4xl font-light opacity-90 leading-relaxed italic mb-16 text-blue-100 tracking-tight">
-              "Ancrés dans les réalités du Bénin et de l'Afrique, nous portons une ambition universelle : transformer la créativité en levier stratégique pour l'avenir."
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mt-20 pt-20 border-t border-white/10 font-black tracking-widest text-lg md:text-xl">
-              <div className="hover:text-[#0078B7] transition-colors">CRÉATIVITÉ</div>
-              <div className="hover:text-[#0078B7] transition-colors">TRANSMISSION</div>
-              <div className="hover:text-[#0078B7] transition-colors">STRATÉGIE</div>
-              <div className="hover:text-[#0078B7] transition-colors">INNOVATION</div>
+            <div className="flex flex-col lg:flex-row items-center gap-16">
+              <div className="lg:w-1/2 text-center lg:text-left">
+                <h2 className="text-4xl md:text-6xl font-bold mb-10 tracking-tight">Notre Vision</h2>
+                <div className="relative">
+                  <p className="text-2xl md:text-4xl font-light opacity-90 leading-relaxed italic mb-16 text-blue-100 tracking-tight relative z-10">
+                    "Ancrés dans les réalités du Bénin et de l'Afrique, nous portons une ambition universelle : transformer la créativité en levier stratégique pour l'avenir."
+                  </p>
+                  <div className="absolute -top-10 -left-10 text-9xl text-white/5 font-serif select-none">“</div>
+                </div>
+              </div>
+
+              <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {[
+                  { title: "CRÉATIVITÉ", desc: "L'audace comme moteur de solutions uniques." },
+                  { title: "TRANSMISSION", desc: "Partager les savoirs pour bâtir demain." },
+                  { title: "STRATÉGIE", desc: "Une vision claire pour un impact durable." },
+                  { title: "INNOVATION", desc: "Repousser les frontières du possible." }
+                ].map((val, idx) => (
+                  <motion.div 
+                    key={val.title}
+                    className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-all group"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.1 }}
+                  >
+                    <h3 className="text-[#0078B7] font-black tracking-widest text-xl mb-4 group-hover:scale-110 transition-transform origin-left">{val.title}</h3>
+                    <p className="text-blue-100/70 leading-relaxed">{val.desc}</p>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </motion.div>
+          
           <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#0078B7] rounded-full mix-blend-screen filter blur-[120px] opacity-20"></div>
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#0078B7] rounded-full mix-blend-screen filter blur-[120px] opacity-20"></div>
         </section>
