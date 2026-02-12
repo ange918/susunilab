@@ -17,7 +17,7 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react
 import { FlipWords } from "@/components/ui/flip-words";
 
 export default function Home() {
-  const words = ["LAB", "LEARNING", "INOVATION", "EXPLORATION"];
+  const flipWords = ["LEARNING", "INOVATION", "EXPLORATION"];
 
   const branches = [
     {
@@ -78,7 +78,8 @@ export default function Home() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              SUSUNI <FlipWords words={words} className="text-transparent bg-clip-text bg-gradient-to-r from-[#0078B7] to-cyan-400" />
+              SUSUNI LAB <br />
+              <FlipWords words={flipWords} className="text-transparent bg-clip-text bg-gradient-to-r from-[#0078B7] to-cyan-400" />
             </motion.h1>
             <motion.p 
               className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto opacity-90 leading-relaxed font-light"
