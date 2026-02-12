@@ -19,10 +19,12 @@ export default function Header() {
   const navLinks = [
     { name: "Accueil", href: "/" },
     { name: "À propos", href: "/a-propos" },
-    { name: "Nos branches", href: "/#branches" },
-    { name: "Projets", href: "/#projets" },
-    { name: "Collaborer", href: "/#collaborer" },
-    { name: "Contact", href: "/#contact" },
+    { name: "Stratégie", href: "/strategy" },
+    { name: "Learning", href: "/learning" },
+    { name: "Innovation", href: "/innovation" },
+    { name: "Exploration", href: "/exploration" },
+    { name: "Collaborer", href: "/collaborer" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (

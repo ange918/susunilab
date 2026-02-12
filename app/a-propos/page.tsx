@@ -13,20 +13,20 @@ export default function AboutPage() {
                 À Propos de <span className="text-[#0078B7]">SUSUNI LAB</span>
               </h1>
               <div className="w-24 h-2 bg-[#0078B7] mb-8"></div>
-              <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
-                <p>
-                  SUSUNI LAB est un laboratoire créatif, stratégique, culturel et innovant basé au Bénin, avec une résonance internationale. Notre mission est d'explorer les potentiels inexploités de l'Afrique contemporaine pour proposer des solutions visionnaires.
-                </p>
-                <p>
-                  Fondé sur la conviction que l'Afrique est le berceau d'une nouvelle Renaissance, nous travaillons à l'intersection de l'art, de la technologie et de la stratégie. Nous ne nous contentons pas d'observer les tendances ; nous les créons en nous appuyant sur un héritage culturel riche et une vision résolument tournée vers l'avenir.
-                </p>
-                <p>
-                  Nous croyons en une Afrique qui ne se contente pas de suivre, mais qui définit les standards de demain à travers la créativité, la transmission de savoirs et l'excellence stratégique. Notre approche est holistique, intégrant les dimensions sociales, économiques et esthétiques pour un impact durable.
-                </p>
-                <p>
-                  Que ce soit à travers l'exploration culturelle, l'apprentissage continu, le conseil stratégique ou l'innovation technologique, chaque projet porté par SUSUNI LAB est une brique posée pour l'édification d'un futur créatif et structuré. Nous sommes les architectes de nouveaux imaginaires, transformant les idées en réalités concrètes et impactantes.
-                </p>
-              </div>
+            <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+              <p>
+                Fondé au Bénin avec une ambition internationale, **SUSUNI LAB** est né d'une volonté profonde : raconter l'Afrique de demain à travers le prisme de la créativité, de la stratégie et de l'innovation. Nous sommes un laboratoire hybride où les idées prennent vie pour transformer les industries créatives.
+              </p>
+              <p>
+                Notre vision est celle d'une Afrique audacieuse, capable de définir ses propres standards et de rayonner mondialement par son excellence. Nous croyons que la culture et la technologie sont les deux moteurs essentiels de cette renaissance.
+              </p>
+              <p>
+                En tant que laboratoire, notre mission est triple : **explorer** les richesses culturelles inexplorées, **accompagner** les marques et talents vers l'excellence stratégique, et **transmettre** les savoirs nécessaires pour structurer l'avenir créatif du continent.
+              </p>
+              <p>
+                Que nous travaillions localement au Bénin ou avec des partenaires internationaux, notre approche reste la même : une rigueur sans faille, une authenticité radicale et une quête permanente d'impact durable.
+              </p>
+            </div>
             </div>
             <div className="relative aspect-square bg-gray-100 rounded-3xl overflow-hidden shadow-2xl group">
                <div className="absolute inset-0 bg-[#1B2441]/10 group-hover:bg-transparent transition-colors duration-500"></div>
