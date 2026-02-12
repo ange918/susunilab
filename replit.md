@@ -25,7 +25,7 @@ public/        - Static assets (SVGs, images)
 - **Lint**: `npm run lint`
 
 ## Configuration
-- `next.config.ts` - Next.js config with `allowedDevOrigins: ["*"]` for Replit proxy compatibility
+- `next.config.ts` - Next.js config with `allowedDevOrigins` for Replit proxy compatibility
 - `postcss.config.mjs` - PostCSS with Tailwind plugin
 - `tsconfig.json` - TypeScript configuration
 
