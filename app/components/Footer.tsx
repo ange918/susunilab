@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { FaInstagram, FaFacebook, FaXTwitter, FaLinkedin } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -16,8 +17,18 @@ export default function Footer() {
           </Link>
           <p className="text-gray-500 text-sm leading-relaxed mb-6 italic">Laboratoire créatif africain à portée internationale.</p>
           <div className="flex space-x-4">
-            <a href="#" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-[#1B2441] hover:bg-[#0078B7] hover:text-white transition-all">LN</a>
-            <a href="#" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-[#1B2441] hover:bg-[#0078B7] hover:text-white transition-all">IG</a>
+            <a href="#" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-[#1B2441] hover:bg-[#0078B7] hover:text-white transition-all">
+              <FaLinkedin className="w-5 h-5" />
+            </a>
+            <a href="#" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-[#1B2441] hover:bg-[#0078B7] hover:text-white transition-all">
+              <FaInstagram className="w-5 h-5" />
+            </a>
+            <a href="#" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-[#1B2441] hover:bg-[#0078B7] hover:text-white transition-all">
+              <FaFacebook className="w-5 h-5" />
+            </a>
+            <a href="#" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-[#1B2441] hover:bg-[#0078B7] hover:text-white transition-all">
+              <FaXTwitter className="w-5 h-5" />
+            </a>
           </div>
         </div>
         <div>
