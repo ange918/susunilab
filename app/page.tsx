@@ -17,23 +17,24 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react
 import { FlipWords } from "@/components/ui/flip-words";
 
 export default function Home() {
-  const flipWords = ["LEARNING", "INOVATION", "EXPLORATION" ,  "EXPLORE"];
+  const flipWords = ["LEARNING", "INOVATION", "CONSULTING" ,  "EXPLORATION"];
 
   const branches = [
-    {
-      id: "EXPLORE",
-      title: "SUSUNI LAB EXPLORE",
-      description: "Recherche et exploration des dynamiques culturelles et créatives africaines.",
-      link: "/exploration",
-      icon: <MagnifyingGlassIcon className="w-8 h-8" />,
-    },
-    {
+     {
       id: "LEARNING",
       title: "SUSUNI LAB LEARNING",
       description: "Programmes de transmission et de formation pour les talents de demain.",
       link: "/learning",
       icon: <AcademicCapIcon className="w-8 h-8" />,
     },
+     {
+      id: "INNOVATIONS",
+      title: "SUSUNI LAB INNOVATIONS",
+      description: "Laboratoire d'idées et de solutions technologiques ancrées localement.",
+      link: "/innovation",
+      icon: <BoltIcon className="w-8 h-8" />,
+    },
+    
     {
       id: "CONSULTING",
       title: "SUSUNI LAB CONSULTING",
@@ -42,12 +43,13 @@ export default function Home() {
       icon: <ShieldCheckIcon className="w-8 h-8" />,
     },
     {
-      id: "INNOVATIONS",
-      title: "SUSUNI LAB INNOVATIONS",
-      description: "Laboratoire d'idées et de solutions technologiques ancrées localement.",
-      link: "/innovation",
-      icon: <BoltIcon className="w-8 h-8" />,
+      id: "EXPLORATION",
+      title: "SUSUNI LAB EXPLORE",
+      description: "Recherche et exploration des dynamiques culturelles et créatives africaines.",
+      link: "/exploration",
+      icon: <MagnifyingGlassIcon className="w-8 h-8" />,
     },
+   
   ];
 
   return (

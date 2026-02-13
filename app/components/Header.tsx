@@ -25,10 +25,13 @@ export default function Header() {
       name: "NOS BRANCHES ",
       href: "#",
       subItems: [
-        { name: "Stratégie", href: "/strategy" },
-        { name: "Learning", href: "/learning" },
-        { name: "Innovation", href: "/innovation" },
-        { name: "Exploration", href: "/exploration" },
+         { name: "LEARNING", href: "/learning" },
+          { name: "INNOVATION", href: "/innovation" }, 
+        { name: "CONSULTING", href: "/strategy" },
+         { name: "EXPLORATION", href: "/exploration" },
+       
+       
+       
       ],
     },
     { name: "Projets", href: "/projets" },
