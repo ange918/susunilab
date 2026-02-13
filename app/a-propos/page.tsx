@@ -58,6 +58,59 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
+              <h2 className="text-3xl md:text-5xl font-bold text-[#1B2441] mb-4">Notre Équipe</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto text-lg">Des passionnés dédiés à l'excellence et à l'innovation.</p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  name: "Sébastien S.",
+                  role: "Directeur de Vision",
+                  image: "/team/sebastien.jpg", // Placeholder
+                },
+                {
+                  name: "Aurore K.",
+                  role: "Stratégie & Culture",
+                  image: "/team/aurore.jpg", // Placeholder
+                },
+                {
+                  name: "Koffi M.",
+                  role: "Innovation Lab",
+                  image: "/team/koffi.jpg", // Placeholder
+                },
+                {
+                  name: "Sonia B.",
+                  role: "Partenariats",
+                  image: "/team/sonia.jpg", // Placeholder
+                },
+              ].map((member, idx) => (
+                <motion.div 
+                  key={member.name}
+                  className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                >
+                  <div className="aspect-[4/5] bg-gray-100 relative overflow-hidden">
+                    <div className="absolute inset-0 flex items-center justify-center text-gray-300 font-bold uppercase tracking-widest">Photo</div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-[#1B2441]">{member.name}</h3>
+                    <p className="text-[#0078B7] font-medium">{member.role}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-32">
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
               <h2 className="text-3xl md:text-5xl font-bold text-[#1B2441] mb-4">Notre Vision & Engagement</h2>
               <p className="text-gray-600 max-w-2xl mx-auto text-lg">Quatre piliers fondamentaux qui guident chacune de nos actions et définissent notre identité.</p>
             </motion.div>
