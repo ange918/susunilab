@@ -50,7 +50,7 @@ export default function Home() {
       id: "LEARNING",
       title: "SUSUNI LAB LEARNING",
       description:
-        "Programmes de transmission et de formation pour les talents de demain.",
+        "L'e-book 'Et si tu devenais Mannequin ?'. Le guide complet pour se préparer, comprendre et affronter le marché du mannequinat.",
       link: "/learning",
       icon: <AcademicCapIcon className="w-8 h-8" />,
     },
