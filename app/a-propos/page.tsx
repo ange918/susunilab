@@ -3,6 +3,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -61,43 +62,53 @@ export default function AboutPage() {
               <h2 className="text-3xl md:text-5xl font-bold text-[#1B2441] mb-4">Notre Équipe</h2>
               <p className="text-gray-600 max-w-2xl mx-auto text-lg">Des passionnés dédiés à l'excellence et à l'innovation.</p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
               {[
                 {
-                  name: "Sébastien S.",
-                  role: "Directeur de Vision",
-                  image: "/team/sebastien.jpg", // Placeholder
+                  name: "Merveille Susuni ATTINMAGBO",
+                  role: "Fondateur & Directeur SUSUNI LAB",
+                  image: "/team/merveille.jpg",
                 },
                 {
-                  name: "Aurore K.",
-                  role: "Stratégie & Culture",
-                  image: "/team/aurore.jpg", // Placeholder
+                  name: "Bienvenue Kpessèton BADOU",
+                  role: "Fashion Industry Advisor",
+                  image: "/team/bienvenue.jpg",
                 },
                 {
-                  name: "Koffi M.",
-                  role: "Innovation Lab",
-                  image: "/team/koffi.jpg", // Placeholder
+                  name: "AKITA Steven",
+                  role: "UX/UI Designer",
+                  image: "/team/steven.jpg",
                 },
                 {
-                  name: "Sonia B.",
-                  role: "Partenariats",
-                  image: "/team/sonia.jpg", // Placeholder
+                  name: "Hermann Richy",
+                  role: "Software Engineer",
+                  image: "/team/hermann.jpg",
+                },
+                {
+                  name: "Ange AKONDE",
+                  role: "Full-Stack Web Developer",
+                  image: "/team/ange.jpg",
                 },
               ].map((member, idx) => (
                 <motion.div 
                   key={member.name}
-                  className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group"
+                  className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group flex flex-col"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
                 >
-                  <div className="aspect-[4/5] bg-gray-100 relative overflow-hidden">
-                    <div className="absolute inset-0 flex items-center justify-center text-gray-300 font-bold uppercase tracking-widest">Photo</div>
+                  <div className="aspect-[3/4] relative overflow-hidden bg-gray-50">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100"
+                    />
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-[#1B2441]">{member.name}</h3>
-                    <p className="text-[#0078B7] font-medium">{member.role}</p>
+                  <div className="p-4 flex-grow flex flex-col justify-center">
+                    <h3 className="text-sm font-bold text-[#1B2441] leading-tight mb-1">{member.name}</h3>
+                    <p className="text-[#0078B7] text-xs font-medium">{member.role}</p>
                   </div>
                 </motion.div>
               ))}
