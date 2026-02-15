@@ -58,13 +58,12 @@ export default function EbookMannequinPage() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
             >
-               <div className="absolute inset-0 bg-gradient-to-tr from-[#1B2441] to-[#0078B7] flex items-center justify-center p-12 text-center">
-                  <div className="text-white">
-                    <h2 className="text-4xl font-black mb-4 uppercase">Et si tu devenais Mannequin ?</h2>
-                    <div className="w-12 h-1 bg-white mx-auto mb-4"></div>
-                    <p className="text-sm uppercase tracking-widest opacity-80">Par SUSUNI LAB</p>
-                  </div>
-               </div>
+               <Image
+                 src="/ebook/cover.jpg"
+                 alt="Et si tu devenais Mannequin ?"
+                 fill
+                 className="object-cover"
+               />
             </motion.div>
           </div>
         </section>

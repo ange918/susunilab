@@ -3,13 +3,14 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 import { 
   AcademicCapIcon, 
   BookOpenIcon, 
   RocketLaunchIcon,
   ChevronRightIcon
 } from "@heroicons/react/24/outline";
-import Link from "next/link";
 
 export default function LearningPage() {
   return (
@@ -87,9 +88,16 @@ export default function LearningPage() {
                 Ressources & Éditions
               </h2>
               <div className="bg-white p-8 rounded-[2rem] shadow-xl border border-gray-100 flex flex-col md:flex-row gap-8 items-center mb-8 relative z-10 hover:shadow-2xl transition-all group">
-                <div className="w-32 h-44 bg-gradient-to-br from-gray-200 to-gray-300 rounded-xl shadow-2xl flex-shrink-0 transform group-hover:rotate-2 transition-transform"></div>
+                <div className="w-32 h-44 relative rounded-xl shadow-2xl flex-shrink-0 transform group-hover:rotate-2 transition-transform overflow-hidden">
+                  <Image
+                    src="/ebook/cover.jpg"
+                    alt="Et si tu devenais Mannequin ?"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <div>
-                  <h4 className="font-bold text-2xl mb-3 text-[#1B2441]">Si tu devenais mannequin</h4>
+                  <h4 className="font-bold text-2xl mb-3 text-[#1B2441]">Et si tu devenais mannequin</h4>
                   <p className="text-gray-500 mb-6 leading-relaxed text-sm italic">"Un guide complet pour naviguer l'industrie avec professionnalisme, de l'image personnelle au développement de carrière."</p>
                   <Link href="/learning/ebook-mannequin" className="flex items-center gap-2 text-[#0078B7] font-black uppercase tracking-widest text-xs hover:gap-4 transition-all">
                     Découvrir l'e-book <ChevronRightIcon className="w-5 h-5" />
