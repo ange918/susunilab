@@ -99,7 +99,7 @@ export default function ProjetsPage() {
             {projectCategories.map((cat, idx) => (
               <motion.div 
                 key={cat.id}
-                className="bg-white dark:bg-[#1B2441] p-8 rounded-3xl border border-gray-100 dark:border-white/10 shadow-sm hover:shadow-xl transition-all group cursor-pointer"
+                className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all group cursor-pointer"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -108,8 +108,8 @@ export default function ProjetsPage() {
                 <div className="text-[#0078B7] mb-6 transform group-hover:scale-110 transition-transform duration-300">
                   {cat.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-[#1B2441] dark:text-white">{cat.title}</h3>
-                <p className="text-gray-500 dark:text-gray-400 text-sm">{cat.description}</p>
+                <h3 className="text-xl font-bold mb-3 text-[#1B2441]">{cat.title}</h3>
+                <p className="text-gray-500 text-sm">{cat.description}</p>
               </motion.div>
             ))}
           </div>
@@ -124,7 +124,7 @@ export default function ProjetsPage() {
                 viewport={{ once: true }}
               >
                 <div className="w-12 h-1 bg-[#0078B7]"></div>
-                <h2 className="text-3xl font-bold text-[#1B2441] dark:text-white">{cat.title}</h2>
+                <h2 className="text-3xl font-bold text-[#1B2441]">{cat.title}</h2>
               </motion.div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -146,13 +146,13 @@ export default function ProjetsPage() {
                           className="object-cover transition-transform duration-500 group-hover:scale-110"
                         />
                       ) : (
-                        <div className="w-full h-full bg-gray-100 dark:bg-white/5 flex items-center justify-center text-gray-300 dark:text-gray-600 font-bold text-lg">
+                        <div className="w-full h-full bg-gray-100 flex items-center justify-center text-gray-300 font-bold text-lg">
                           IMAGE PROJET
                         </div>
                       )}
                       
                       <div className="absolute top-6 right-6">
-                        <span className={`px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest ${project.status === "Réalisé" ? "bg-[#0078B7] text-white" : "bg-gray-200 dark:bg-white/10 text-gray-600 dark:text-gray-400"}`}>
+                        <span className={`px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest ${project.status === "Réalisé" ? "bg-[#0078B7] text-white" : "bg-gray-200 text-gray-600"}`}>
                           {project.status}
                         </span>
                       </div>
@@ -168,11 +168,11 @@ export default function ProjetsPage() {
                     <div className="flex justify-between items-start">
                       <div>
                         <span className="text-xs font-bold text-[#0078B7] uppercase tracking-widest">{project.type}</span>
-                        <h4 className="text-2xl font-bold text-[#1B2441] dark:text-white mt-1">{project.title}</h4>
-                        <p className="text-gray-500 dark:text-gray-400 mt-2">{project.desc}</p>
+                        <h4 className="text-2xl font-bold text-[#1B2441] mt-1">{project.title}</h4>
+                        <p className="text-gray-500 mt-2">{project.desc}</p>
                       </div>
                       {project.link && (
-                        <Link href={project.link} className="w-10 h-10 rounded-full border border-gray-100 dark:border-white/10 flex items-center justify-center hover:bg-[#0078B7] hover:text-white transition-all text-[#1B2441] dark:text-white">
+                        <Link href={project.link} className="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-[#0078B7] hover:text-white transition-all text-[#1B2441]">
                           <ChevronRightIcon className="w-5 h-5" />
                         </Link>
                       )}
@@ -185,15 +185,15 @@ export default function ProjetsPage() {
         </section>
 
         {/* Call to Action */}
-        <section className="bg-gray-50 dark:bg-white/5 py-24 transition-colors duration-300">
+        <section className="bg-gray-50 py-24 transition-colors duration-300">
           <motion.div 
             className="max-w-4xl mx-auto px-6 text-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-[#1B2441] dark:text-white mb-8">Vous avez un projet en tête ?</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 mb-12 leading-relaxed">
+            <h2 className="text-4xl font-bold text-[#1B2441] mb-8">Vous avez un projet en tête ?</h2>
+            <p className="text-xl text-gray-600 mb-12 leading-relaxed">
               Nous sommes toujours à la recherche de nouvelles opportunités pour explorer, innover et créer de l'impact.
             </p>
             <Link href="/collaborer" className="inline-block px-12 py-5 bg-[#0078B7] text-white font-bold rounded-2xl hover:bg-[#1B2441] transition-all transform hover:scale-105 shadow-xl shadow-[#0078B7]/20">
