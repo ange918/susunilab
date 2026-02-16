@@ -89,6 +89,11 @@ export default function AboutPage() {
                   role: "Full-Stack Web Developer",
                   image: "/team/ange.jpg",
                 },
+                {
+                  name: "ORE Gauthier",
+                  role: "Community Manager",
+                  image: "/team/gauthier.jpg",
+                },
               ].map((member, idx) => (
                 <motion.div 
                   key={member.name}

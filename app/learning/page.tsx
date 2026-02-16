@@ -117,8 +117,8 @@ export default function LearningPage() {
           >
             <div className="relative z-10">
               <RocketLaunchIcon className="w-16 h-16 text-[#0078B7] mx-auto mb-8" />
-              <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">E-LEARNING EN PRÉPARATION</h2>
-              <p className="text-xl opacity-80 max-w-2xl mx-auto mb-10 leading-relaxed">Nous structurons actuellement une plateforme d'apprentissage immersive pour rendre nos formations stratégiques accessibles partout dans le monde.</p>
+              <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">FORMATIONS EN PRÉPARATION</h2>
+              <p className="text-xl opacity-80 max-w-2xl mx-auto mb-10 leading-relaxed">Nous préparons actuellement des programmes intensifs pour former les futurs directeurs artistiques de l'écosystème créatif africain.</p>
               <div className="inline-block px-10 py-4 bg-[#0078B7] rounded-2xl font-black uppercase tracking-widest text-sm shadow-2xl shadow-[#0078B7]/20">
                 Bientôt disponible
               </div>
