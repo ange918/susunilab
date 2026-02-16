@@ -157,7 +157,7 @@ export default function Home() {
         </section>
 
         {/* SECTION À PROPOS (COURTE) */}
-        <section id="propos" className="py-32 bg-white">
+        <section id="propos" className="py-32 bg-white dark:bg-[#1B2441] transition-colors duration-300">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col md:flex-row items-center gap-16">
               <motion.div
@@ -166,11 +166,11 @@ export default function Home() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-4xl md:text-6xl font-bold text-[#1B2441] mb-8 leading-tight">
+                <h2 className="text-4xl md:text-6xl font-bold text-[#1B2441] dark:text-white mb-8 leading-tight">
                   Un laboratoire au cœur de{" "}
                   <span className="text-[#0078B7]">l'innovation africaine</span>
                 </h2>
-                <p className="text-xl text-gray-600 mb-10 leading-relaxed">
+                <p className="text-xl text-gray-600 dark:text-gray-400 mb-10 leading-relaxed">
                   SUSUNI LAB est un laboratoire qui aide les personnes, les
                   marques et les organisations à grandir. C’est un lieu où l’on
                   crée, innove, apprend et reçoit des conseils. On y imagine des
@@ -271,10 +271,10 @@ export default function Home() {
         </section>
 
         {/* BRANCHES SECTION */}
-        <section id="branches" className="py-32 bg-gray-50">
+        <section id="branches" className="py-32 bg-gray-50 dark:bg-[#1B2441]/50 transition-colors duration-300">
           <div className="max-w-7xl mx-auto px-6 text-center mb-24">
             <motion.h2
-              className="text-4xl md:text-6xl font-bold mb-6 text-[#1B2441] tracking-tight"
+              className="text-4xl md:text-6xl font-bold mb-6 text-[#1B2441] dark:text-white tracking-tight"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -292,7 +292,7 @@ export default function Home() {
             {branches.map((branch, idx) => (
               <motion.div
                 key={branch.id}
-                className="bg-white p-10 rounded-[2rem] shadow-sm hover:shadow-2xl transition-all border border-gray-100 group flex flex-col h-full"
+                className="bg-white dark:bg-[#1B2441] p-10 rounded-[2rem] shadow-sm hover:shadow-2xl transition-all border border-gray-100 dark:border-white/10 group flex flex-col h-full"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -301,10 +301,10 @@ export default function Home() {
                 <div className="text-[#0078B7] mb-8 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                   {branch.icon}
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-[#1B2441] leading-tight">
+                <h3 className="text-2xl font-bold mb-4 text-[#1B2441] dark:text-white leading-tight">
                   {branch.title}
                 </h3>
-                <p className="text-gray-600 text-lg leading-relaxed mb-8 flex-grow">
+                <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-8 flex-grow">
                   {branch.description}
                 </p>
                 <Link
@@ -320,10 +320,10 @@ export default function Home() {
         </section>
 
         {/* FAQ SECTION */}
-        <section id="faq" className="py-32 bg-white">
+        <section id="faq" className="py-32 bg-white dark:bg-[#1B2441] transition-colors duration-300">
           <div className="max-w-4xl mx-auto px-6">
             <motion.h2
-              className="text-4xl md:text-5xl font-bold text-center text-[#1B2441] mb-20 tracking-tight"
+              className="text-4xl md:text-5xl font-bold text-center text-[#1B2441] dark:text-white mb-20 tracking-tight"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -354,15 +354,15 @@ export default function Home() {
                 >
                   <Disclosure
                     as="div"
-                    className="bg-gray-50 rounded-[2rem] overflow-hidden border border-gray-100"
+                    className="bg-gray-50 dark:bg-[#1B2441]/50 rounded-[2rem] overflow-hidden border border-gray-100 dark:border-white/10"
                   >
-                    <DisclosureButton className="group flex w-full items-center justify-between p-8 text-left focus:outline-none hover:bg-gray-100 transition-colors">
-                      <span className="text-xl font-bold text-[#1B2441]">
+                    <DisclosureButton className="group flex w-full items-center justify-between p-8 text-left focus:outline-none hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
+                      <span className="text-xl font-bold text-[#1B2441] dark:text-white">
                         {item.q}
                       </span>
                       <ChevronDownIcon className="size-6 text-[#0078B7] transition-transform group-data-[open]:rotate-180" />
                     </DisclosureButton>
-                    <DisclosurePanel className="px-8 pb-8 text-gray-600 text-lg leading-relaxed">
+                    <DisclosurePanel className="px-8 pb-8 text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
                       {item.a}
                     </DisclosurePanel>
                   </Disclosure>
