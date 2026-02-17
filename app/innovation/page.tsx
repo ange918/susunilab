@@ -64,15 +64,15 @@ export default function InnovationPage() {
               viewport={{ once: true }}
             >
               <div className="inline-block px-4 py-1 bg-[#0078B7]/10 text-[#0078B7] rounded-full text-sm font-bold mb-6 tracking-widest">PROJET PHARE</div>
-              <h2 className="text-5xl font-black mb-6 text-[#1B2441]">FASHLINK</h2>
+              <h2 className="text-5xl font-black mb-6 text-[#1B2441]">PROJET ALPHA</h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                FASHLINK est notre solution technologique majeure dédiée à l'écosystème de la mode. Elle connecte les créateurs, les mannequins et les professionnels du secteur pour fluidifier les collaborations et professionnaliser les échanges.
+                Le Projet Alpha est notre solution technologique majeure actuellement en développement pour l'écosystème créatif. Elle vise à fluidifier les collaborations et professionnaliser les échanges au sein du secteur.
               </p>
               <ul className="space-y-6 mb-12">
                 {[
-                  "Gestion de portfolio numérique haute fidélité",
-                  "Networking professionnel ciblé et sécurisé",
-                  "Optimisation en temps réel des opportunités de carrière"
+                  "Gestion de portfolio haute fidélité",
+                  "Networking professionnel ciblé",
+                  "Optimisation des opportunités"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-4 text-gray-700 text-lg">
                     <div className="w-6 h-6 bg-[#0078B7] rounded-full flex items-center justify-center text-white">
@@ -83,7 +83,7 @@ export default function InnovationPage() {
                 ))}
               </ul>
               <button className="px-10 py-5 bg-[#1B2441] text-white font-black rounded-2xl hover:bg-[#0078B7] transition-all transform hover:scale-105 shadow-2xl shadow-[#1B2441]/20 flex items-center gap-3">
-                Découvrir FASHLINK
+                En savoir plus
                 <ChevronRightIcon className="w-6 h-6" />
               </button>
             </motion.div>
@@ -94,8 +94,8 @@ export default function InnovationPage() {
               viewport={{ once: true }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-[#0078B7]/5 to-transparent"></div>
-              <span className="text-gray-100 text-8xl font-black tracking-tighter opacity-50 absolute">FL</span>
-              <span className="text-[#1B2441] text-6xl font-black relative z-10 tracking-tighter">FASHLINK</span>
+              <span className="text-gray-100 text-8xl font-black tracking-tighter opacity-50 absolute">PA</span>
+              <span className="text-[#1B2441] text-6xl font-black relative z-10 tracking-tighter">ALPHA</span>
             </motion.div>
           </div>
 
