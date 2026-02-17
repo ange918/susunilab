@@ -58,7 +58,7 @@ const projectCategories = [
     icon: <LightBulbIcon className="w-8 h-8" />,
     description: "Solutions technologiques au service des industries créatives.",
     projects: [
-      { title: "FashLink Pro", desc: "Plateforme de mise en relation B2B pour la mode.", type: "Tech", status: "En cours" },
+      { title: "Projet Alpha", desc: "Plateforme en préparation.", type: "Tech", status: "En cours" },
       { title: "Art-Intelligence", desc: "Exploration des arts génératifs au Bénin.", type: "IA", status: "En cours" }
     ]
   }
