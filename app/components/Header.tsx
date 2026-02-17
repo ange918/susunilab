@@ -22,13 +22,13 @@ export default function Header() {
     { name: "Accueil", href: "/" },
     { name: "À propos", href: "/a-propos" },
     {
-      name: "NOS BRANCHES ",
+      name: "Nos Branches ",
       href: "#",
       subItems: [
-         { name: "LEARNING", href: "/learning" },
-          { name: "INNOVATION", href: "/innovation" }, 
-        { name: "CONSULTING", href: "/strategy" },
-         { name: "EXPLORATION", href: "/exploration" },
+         { name: "Learning", href: "/learning" },
+          { name: "Innovation", href: "/innovation" }, 
+        { name: "Consulting", href: "/strategy" },
+         { name: "Explore", href: "/exploration" },
       ],
     },
     { name: "Projets", href: "/projets" },

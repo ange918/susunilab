@@ -42,13 +42,7 @@ export default function Footer() {
             >
               <FaFacebook className="w-5 h-5" />
             </a>
-            <a
-              href="#"
-              className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-[#1B2441] hover:bg-[#0078B7] hover:text-white transition-all"
-            >
-              <FaXTwitter className="w-5 h-5" />
-            </a>
-          </div>
+          
         </div>
         <div>
           <h5 className="font-bold text-[#1B2441] mb-6 uppercase tracking-widest text-xs">

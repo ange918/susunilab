@@ -22,7 +22,7 @@ import { FlipWords } from "@/components/ui/flip-words";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 
 export default function Home() {
-  const flipWords = ["LEARNING", "INOVATION", "CONSULTING", "EXPLORATION"];
+  const flipWords = ["LEARNING", "INNOVATION", "CONSULTING", "EXPLORE"];
 
   const testimonials = [
     {
@@ -488,7 +488,7 @@ export default function Home() {
               </div>
               <h2 className="text-4xl md:text-7xl font-black text-[#1B2441] mb-10 leading-none tracking-tighter">
                 PRÊT À RÉINVENTER <br />
-                L'AVENIR WITH NOUS ?
+                L'AVENIR AVEC NOUS ?
               </h2>
               <p className="text-xl md:text-2xl text-gray-600 mb-16 max-w-3xl mx-auto leading-relaxed font-light">
                 Nous collaborons with des institutions, des marques et des
