@@ -1,0 +1,93 @@
+12:38:15.172 Running build in Washington, D.C., USA (East) – iad1
+12:38:15.172 Build machine configuration: 2 cores, 8 GB
+12:38:15.280 Cloning github.com/ange918/susunilab (Branch: main, Commit: b278215)
+12:38:15.281 Previous build caches not available.
+12:38:15.808 Cloning completed: 527.000ms
+12:38:16.185 Running "vercel build"
+12:38:16.773 Vercel CLI 50.15.1
+12:38:17.076 Installing dependencies...
+12:38:35.425 
+12:38:35.425 added 392 packages in 18s
+12:38:35.426 
+12:38:35.426 150 packages are looking for funding
+12:38:35.426   run `npm fund` for details
+12:38:35.520 Detected Next.js version: 16.1.6
+12:38:35.526 Running "npm run build"
+12:38:35.622 
+12:38:35.623 > susuni@0.1.0 build
+12:38:35.623 > next build
+12:38:35.623 
+12:38:36.371 Attention: Next.js now collects completely anonymous telemetry regarding usage.
+12:38:36.373 This information is used to shape Next.js' roadmap and prioritize features.
+12:38:36.373 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+12:38:36.373 https://nextjs.org/telemetry
+12:38:36.373 
+12:38:36.386 ▲ Next.js 16.1.6 (Turbopack)
+12:38:36.387 
+12:38:36.418   Creating an optimized production build ...
+12:38:46.814 
+12:38:46.814 > Build error occurred
+12:38:46.818 Error: Turbopack build failed with 2 errors:
+12:38:46.818 ./app/components/Header.tsx:1:20
+12:38:46.818 Ecmascript file had an error
+12:38:46.819 [0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m { useState[33m,[39m useEffect } [36mfrom[39m [32m"react"[39m[33m;[39m
+12:38:46.819  [90m   |[39m                    [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+12:38:46.819  [90m 2 |[39m [36mimport[39m [33mImage[39m [36mfrom[39m [32m"next/image"[39m[33m;[39m
+12:38:46.819  [90m 3 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
+12:38:46.819  [90m 4 |[39m[0m
+12:38:46.819 
+12:38:46.819 You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+12:38:46.820 
+12:38:46.820  Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+12:38:46.820 
+12:38:46.820 
+12:38:46.820 
+12:38:46.820 Import traces:
+12:38:46.820   Server Component:
+12:38:46.820     ./app/components/Header.tsx
+12:38:46.820     ./app/collaborer/page.tsx
+12:38:46.820 
+12:38:46.820   Client Component Browser:
+12:38:46.821     ./app/components/Header.tsx [Client Component Browser]
+12:38:46.821     ./app/page.tsx [Client Component Browser]
+12:38:46.821     ./app/page.tsx [Server Component]
+12:38:46.821 
+12:38:46.821   Client Component SSR:
+12:38:46.821     ./app/components/Header.tsx [Client Component SSR]
+12:38:46.821     ./app/page.tsx [Client Component SSR]
+12:38:46.821     ./app/page.tsx [Server Component]
+12:38:46.821 
+12:38:46.821 
+12:38:46.821 ./app/components/Header.tsx:1:10
+12:38:46.821 Ecmascript file had an error
+12:38:46.822 [0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m { useState[33m,[39m useEffect } [36mfrom[39m [32m"react"[39m[33m;[39m
+12:38:46.822  [90m   |[39m          [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+12:38:46.822  [90m 2 |[39m [36mimport[39m [33mImage[39m [36mfrom[39m [32m"next/image"[39m[33m;[39m
+12:38:46.822  [90m 3 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
+12:38:46.822  [90m 4 |[39m[0m
+12:38:46.822 
+12:38:46.822 You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+12:38:46.822 
+12:38:46.822  Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+12:38:46.822 
+12:38:46.823 
+12:38:46.823 
+12:38:46.823 Import traces:
+12:38:46.823   Server Component:
+12:38:46.823     ./app/components/Header.tsx
+12:38:46.823     ./app/collaborer/page.tsx
+12:38:46.823 
+12:38:46.823   Client Component Browser:
+12:38:46.823     ./app/components/Header.tsx [Client Component Browser]
+12:38:46.823     ./app/page.tsx [Client Component Browser]
+12:38:46.823     ./app/page.tsx [Server Component]
+12:38:46.829 
+12:38:46.829   Client Component SSR:
+12:38:46.829     ./app/components/Header.tsx [Client Component SSR]
+12:38:46.829     ./app/page.tsx [Client Component SSR]
+12:38:46.829     ./app/page.tsx [Server Component]
+12:38:46.829 
+12:38:46.829 
+12:38:46.829     at <unknown> (./app/components/Header.tsx:1:20)
+12:38:46.829     at <unknown> (./app/components/Header.tsx:1:10)
+12:38:46.878 Error: Command "npm run build" exited with 1
