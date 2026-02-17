@@ -58,7 +58,6 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="absolute inset-0 bg-[#1B2441]/10 group-hover:bg-transparent transition-colors duration-500"></div>
               {/* Illustration ou image d'ambiance à venir */}
               <div className="absolute inset-0 flex items-center justify-center text-[#1B2441]/20 font-bold text-4xl">
                 CREATIVITÉ • VISION
