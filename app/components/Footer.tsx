@@ -25,25 +25,32 @@ export default function Footer() {
           </p>
           <div className="flex space-x-4">
             <a
-              href="#"
+              href="https://www.linkedin.com/company/susuni-lab"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-[#1B2441] hover:bg-[#0078B7] hover:text-white transition-all"
             >
               <FaLinkedin className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/susuni.lab"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-[#1B2441] hover:bg-[#0078B7] hover:text-white transition-all"
             >
               <FaInstagram className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://www.facebook.com/share/17f1ZKUfWY/?mibextid=wwXIfr"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-[#1B2441] hover:bg-[#0078B7] hover:text-white transition-all"
             >
               <FaFacebook className="w-5 h-5" />
             </a>
-          
+          </div>
         </div>
+
         <div>
           <h5 className="font-bold text-[#1B2441] mb-6 uppercase tracking-widest text-xs">
             Navigation
@@ -71,6 +78,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
+
         <div>
           <h5 className="font-bold text-[#1B2441] mb-6 uppercase tracking-widest text-xs">
             Contact
@@ -97,6 +105,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
+
         <div>
           <h5 className="font-bold text-[#1B2441] mb-6 uppercase tracking-widest text-xs">
             Newsletter
@@ -116,6 +125,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
       <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-gray-50 text-center text-xs text-gray-400">
         <p>© {new Date().getFullYear()} SUSUNI LAB. Tous droits réservés.</p>
       </div>
