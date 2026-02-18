@@ -52,13 +52,13 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center space-x-8 text-sm font-semibold uppercase tracking-wider text-[#1B2441]">
+        <nav className="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wider text-[#1B2441]">
           {navLinks.map((link) => (
             <div key={link.name} className="relative group">
               {link.subItems ? (
                 <>
                   <button
-                    className="hover:text-[#0078B7] transition-colors flex items-center gap-1"
+                    className="hover:text-[#0078B7] transition-colors flex items-center gap-1 uppercase"
                     onClick={() => setIsBranchesOpen(!isBranchesOpen)}
                   >
                     {link.name}
@@ -91,7 +91,7 @@ export default function Header() {
               ) : (
                 <Link
                   href={link.href}
-                  className="hover:text-[#0078B7] transition-colors"
+                  className="hover:text-[#0078B7] transition-colors uppercase"
                 >
                   {link.name}
                 </Link>
@@ -142,7 +142,7 @@ export default function Header() {
                       className="text-lg font-bold text-[#1B2441] flex items-center justify-between"
                       onClick={() => setIsBranchesOpen(!isBranchesOpen)}
                     >
-                      {link.name}
+                      {link.name.toLowerCase()}
                       <svg
                         className={`w-5 h-5 transition-transform ${isBranchesOpen ? "rotate-180" : ""}`}
                         fill="none"
@@ -178,7 +178,7 @@ export default function Header() {
                     className="text-lg font-bold text-[#1B2441] hover:text-[#0078B7]"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    {link.name}
+                    {link.name.toLowerCase()}
                   </Link>
                 )}
               </div>
