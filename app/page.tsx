@@ -161,7 +161,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col md:flex-row items-center gap-16">
               <motion.div
-                className="md:w-1/2"
+                className="md:w-1/2 order-2 md:order-1"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -188,7 +188,7 @@ export default function Home() {
                 </Link>
               </motion.div>
               <motion.div
-                className="md:w-1/2 relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl border border-gray-100"
+                className="md:w-1/2 relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl border border-gray-100 order-1 md:order-2"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
