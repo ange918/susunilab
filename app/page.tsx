@@ -188,15 +188,18 @@ export default function Home() {
                 </Link>
               </motion.div>
               <motion.div
-                className="md:w-1/2 relative aspect-square bg-gray-50 rounded-[3rem] overflow-hidden shadow-2xl border border-gray-100 flex items-center justify-center"
+                className="md:w-1/2 relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl border border-gray-100"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
               >
-                <div className="text-[#1B2441]/10 font-black text-6xl rotate-12 select-none">
-                  VISION
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#1B2441]/5 to-transparent"></div>
+                <Image
+                  src="/vision.jpg"
+                  alt="Vision SUSUNI LAB"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1B2441]/40 to-transparent"></div>
               </motion.div>
             </div>
           </div>

@@ -52,16 +52,19 @@ export default function AboutPage() {
               </div>
             </motion.div>
             <motion.div
-              className="relative aspect-square bg-gray-100 rounded-3xl overflow-hidden shadow-2xl group"
+              className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl group"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              {/* Illustration ou image d'ambiance à venir */}
-              <div className="absolute inset-0 flex items-center justify-center text-[#1B2441]/20 font-bold text-4xl">
-                CREATIVITÉ • VISION
-              </div>
+              <Image
+                src="/about-logo.jpg"
+                alt="Logo SUSUNI LAB"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1B2441]/20 to-transparent"></div>
             </motion.div>
           </div>
 
