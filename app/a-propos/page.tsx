@@ -110,6 +110,11 @@ export default function AboutPage() {
                   image: "/team/ange.jpg",
                 },
                 {
+                  name: "Méchack AHOUANDJA",
+                  role: "Communications and Press Relations Officer",
+                  image: "/team/mechack.jpg",
+                },
+                {
                   name: "ORE Gauthier",
                   role: "Community Manager",
                   image: "/team/gauthier.jpg",

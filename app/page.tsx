@@ -188,7 +188,7 @@ export default function Home() {
                 </Link>
               </motion.div>
               <motion.div
-                className="md:w-1/2 relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl border border-gray-100 order-1 md:order-2"
+                className="md:w-1/2 relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl border border-gray-100 order-1 md:order-2 w-full"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
